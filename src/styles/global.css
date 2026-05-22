@@ -6,7 +6,7 @@
   --color-secondary: #BC4749;
   --color-accent: #FDD835;
   --color-black: #0B090A;
-  --color-panel: #B8D4EC;     /* Deeper Superman blue for panels */
+  --color-panel: #81D4FA;   /* Deeper Superman blue for panels */
   --color-bg: #BC4749;        /* Dull Red background */
   --color-white: #FAFAFA;
   --dot-color: rgba(0,0,0,0.15);
@@ -62,4 +62,40 @@ h1, h2, h3 {
   border-radius: 15px;
   padding: 2.5rem;
   box-shadow: 8px 8px 0px var(--color-black);
+}
+
+/* Reusable Highlight for ISHAN.DEV and Ishan */
+.text-highlight {
+  color: #3366FF; /* The exact blue from your Home page */
+  -webkit-text-stroke: 3px var(--color-black);
+  paint-order: stroke fill;
+  font-style: italic;
+}
+
+/* The Nav Bar Button */
+.nav-btn {
+  display: inline-block;
+  font-family: 'Bangers', cursive;
+  font-size: 1.3rem;
+  padding: 0.3rem 1rem;
+  background-color: var(--color-white);
+  background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
+  background-size: 8px 8px;
+  color: var(--color-black);
+  text-decoration: none;
+  border: 3px solid var(--color-black);
+  box-shadow: 4px 4px 0px var(--color-black);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  cursor: pointer;
+}
+
+.nav-btn:hover {
+  background-color: var(--color-panel);
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px var(--color-black);
+}
+
+.nav-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px var(--color-black);
 }
