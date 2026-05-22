@@ -1,0 +1,28 @@
+---
+// src/layouts/Layout.astro
+import '../styles/global.css';
+
+const { title } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title} | Ishan Sinha</title>
+  </head>
+  <body>
+    <header class="comic-panel" style="margin: 2rem auto; max-width: 900px; padding: 1rem 2.5rem; display: flex; justify-content: space-between; align-items: center;">
+      <h1 style="margin: 0; font-size: 2.5rem; color: var(--color-primary);">ISHAN.DEV</h1>
+      <nav style="display: flex; gap: 1.5rem;">
+        <a href="/" style="font-family: 'Bangers', cursive; font-size: 1.5rem; color: var(--color-black); text-decoration: none;">HOME</a>
+        <a href="/experience" style="font-family: 'Bangers', cursive; font-size: 1.5rem; color: var(--color-black); text-decoration: none;">EXPERIENCE</a>
+        <a href="/projects" style="font-family: 'Bangers', cursive; font-size: 1.5rem; color: var(--color-black); text-decoration: none;">PROJECTS</a>
+      </nav>
+    </header>
+
+    <main style="max-width: 900px; margin: 0 auto; padding: 0 1rem;">
+      <slot /> 
+    </main>
+  </body>
+</html>
