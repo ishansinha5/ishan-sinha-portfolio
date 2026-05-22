@@ -23,12 +23,18 @@ import Layout from '../layouts/Layout.astro';
             <h3>NBA Finals NLP Predictor</h3>
             <span class="status live">Live on Streamlit</span>
           </div>
+          <div class="pill-container">
+            <span class="pill-tag">Python</span>
+            <span class="pill-tag">NLP</span>
+            <span class="pill-tag">Streamlit</span>
+            <span class="pill-tag">Sentiment Analysis</span>
+          </div>
           <p>
-            An NLP pipeline tracking team momentum metrics via postgame media sentiment. Engineered to utilize real, live scraped data directly from press conferences—aggressively scrubbing broadcast noise to maintain highly accurate dataset integrity.
+            An end-to-end NLP pipeline tracking team momentum metrics through postgame media sentiment. I built this to process live scraped data from press conferences, scrubbing out the broadcast noise to keep the dataset accurate and predict the 2026 NBA Finals.
           </p>
           <div class="project-links">
-            <a href="#" class="comic-btn mini-btn">View App</a>
-            <a href="#" class="comic-btn mini-btn secondary-btn">GitHub</a>
+            <a href="https://nba-finals-predictor-2026-izrjrrysjipdqjlrqbv5z7.streamlit.app/" target="_blank" class="comic-btn mini-btn">View App</a>
+            <a href="https://github.com/ishansinha5/NBA-Finals-Predictor-2026" target="_blank" class="comic-btn mini-btn secondary-btn">View GitHub Repository</a>
           </div>
         </div>
 
@@ -37,12 +43,18 @@ import Layout from '../layouts/Layout.astro';
             <h3>Comic Book Shop Tracker</h3>
             <span class="status dev">Phase 2 in Dev</span>
           </div>
+          <div class="pill-container">
+            <span class="pill-tag">Microservices</span>
+            <span class="pill-tag">Python/FastAPI</span>
+            <span class="pill-tag">JavaScript/Vercel</span>
+            <span class="pill-tag">C++</span>
+          </div>
           <p>
-            A microservices-based shop locator and inventory tracker currently live on Vercel (Phase 1). Active development on Phase 2 includes massive architectural refactoring to optimize state management and backend routing speeds.
+            A microservices-based shop locator and inventory tracker. Phase 1 is currently live on Vercel. For Phase 2, I am actively working on restructuring the architecture to include a C++ perceptual hashing layer and a Python FastAPI backend to optimize image processing and reduce redundant GPU use.
           </p>
           <div class="project-links">
-            <a href="#" class="comic-btn mini-btn">Live Deploy</a>
-            <a href="#" class="comic-btn mini-btn secondary-btn">GitHub</a>
+            <a href="https://comicbookshopdetector.vercel.app/" target="_blank" class="comic-btn mini-btn">Live Deploy</a>
+            <a href="https://github.com/ishansinha5/comicbookshopdetector" target="_blank" class="comic-btn mini-btn secondary-btn">View GitHub Repository</a>
           </div>
         </div>
 
@@ -59,11 +71,17 @@ import Layout from '../layouts/Layout.astro';
             <h3>NFL Combine Predictive Analysis</h3>
             <span class="status">Python / ML</span>
           </div>
+          <div class="pill-container">
+            <span class="pill-tag">Python</span>
+            <span class="pill-tag">Machine Learning</span>
+            <span class="pill-tag">Random Forest & SVM</span>
+            <span class="pill-tag">Academic Project</span>
+          </div>
           <p>
-            Developed a multi-model ensemble analysis suite (incorporating Random Forest and SVM) to predict and grade 2026 draft classes. Specifically configured to evaluate the Buffalo Bills' ten-pick class, alongside deep-dives into the Ravens and NFC North data.
+            This started as an academic project and grew into a supervised machine learning suite. I used Random Forest and SVM ensembles to predict NFL rookie trajectories, evaluating draft classes for the NFC North and a few other key teams.
           </p>
           <div class="project-links">
-            <a href="#" class="comic-btn mini-btn secondary-btn">View Repository</a>
+            <a href="https://github.com/ishansinha5/NFL-Combine-Predictive-Analysis" target="_blank" class="comic-btn mini-btn secondary-btn">View GitHub Repository</a>
           </div>
         </div>
 
@@ -72,11 +90,17 @@ import Layout from '../layouts/Layout.astro';
             <h3>ISS Telemetry Analytics</h3>
             <span class="status">Computational Modeling</span>
           </div>
+          <div class="pill-container">
+            <span class="pill-tag">Python</span>
+            <span class="pill-tag">Data Visualization</span>
+            <span class="pill-tag">Unsupervised Learning</span>
+            <span class="pill-tag">Academic Project</span>
+          </div>
           <p>
-            Processed and analyzed high-velocity telemetry data streams to calculate structural limits and optimize trajectory modeling. Built leveraging core computational data science principles from CMSE coursework.
+            Built as an extension of my CMSE coursework, this is an unsupervised learning and spatial analysis pipeline. I mapped orbital bias and altitude decay by processing telemetry data streams to calculate structural limits and optimize trajectory models.
           </p>
           <div class="project-links">
-            <a href="#" class="comic-btn mini-btn secondary-btn">View Repository</a>
+            <a href="https://github.com/ishansinha5/ISS-Telemetry-Analytics" target="_blank" class="comic-btn mini-btn secondary-btn">View GitHub Repository</a>
           </div>
         </div>
 
@@ -122,7 +146,7 @@ import Layout from '../layouts/Layout.astro';
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
     gap: 1rem;
     flex-wrap: wrap;
   }
@@ -131,6 +155,25 @@ import Layout from '../layouts/Layout.astro';
     font-size: 1.6rem;
     margin: 0;
     line-height: 1.1;
+  }
+
+  .pill-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .pill-tag {
+    background-color: var(--color-white);
+    border: 2px solid var(--color-black);
+    color: var(--color-black);
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
   }
 
   .status {
