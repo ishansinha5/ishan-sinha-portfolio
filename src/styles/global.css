@@ -7,7 +7,7 @@
   --color-accent: #FDD835;
   --color-black: #0B090A;
   --color-panel: #81D4FA;   /* Deeper Superman blue for panels */
-  --color-bg: #BC4749;        /* Dull Red background */
+  --color-bg: #BC4749;      /* Dull Red background */
   --color-white: #FAFAFA;
   --dot-color: rgba(0,0,0,0.15);
 }
@@ -66,7 +66,7 @@ h1, h2, h3 {
 
 /* Reusable Highlight for ISHAN.DEV and Ishan */
 .text-highlight {
-  color: #3366FF; /* The exact blue from your Home page */
+  color: #3366FF; 
   -webkit-text-stroke: 3px var(--color-black);
   paint-order: stroke fill;
   font-style: italic;
