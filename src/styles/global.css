@@ -2,12 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@400;600;800&display=swap');
 
 :root {
-  --color-primary: #1E88E5;
-  --color-secondary: #BC4749;
-  --color-accent: #FDD835;
+  --color-primary: #3366FF;   /* Electric Blue */
+  --color-secondary: #BC4749; /* Pale Red for dates/accents */
+  --color-accent: #FFEA00;    /* Spider-Verse Yellow */
   --color-black: #0B090A;
-  --color-panel: #81D4FA;   /* Deeper Superman blue for panels */
-  --color-bg: #BC4749;      /* Dull Red background */
+  --color-panel: #81D4FA;     /* Vibrant Comic Cyan */
+  --color-bg: #BC4749;        /* Dull Red Background */
   --color-white: #FAFAFA;
   --dot-color: rgba(0,0,0,0.15);
 }
@@ -17,17 +17,20 @@ body {
   padding: 0;
   font-family: 'Inter', sans-serif;
   background-color: var(--color-bg);
+  
+  /* Layers the Ben-Day dots OVER the zooming radial sunburst */
+  background-image: 
+    radial-gradient(var(--dot-color) 1px, transparent 1px),
+    repeating-conic-gradient(from 0deg at 50% 50%, transparent 0deg 15deg, rgba(0, 0, 0, 0.08) 15deg 30deg);
+  background-size: 8px 8px, 100% 100%;
+  background-attachment: fixed; /* Keeps the zoom centered when scrolling */
+  
   color: var(--color-black);
 }
 
 h1, h2, h3 {
   font-family: 'Bangers', cursive;
   color: var(--color-black);
-}
-
-.halftone-dots {
-  background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
-  background-size: 8px 8px;
 }
 
 .comic-btn {
@@ -66,7 +69,7 @@ h1, h2, h3 {
 
 /* Reusable Highlight for ISHAN.DEV and Ishan */
 .text-highlight {
-  color: #3366FF; 
+  color: var(--color-primary); 
   -webkit-text-stroke: 3px var(--color-black);
   paint-order: stroke fill;
   font-style: italic;
