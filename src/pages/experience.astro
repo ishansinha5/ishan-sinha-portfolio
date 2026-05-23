@@ -6,8 +6,8 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Experience">
   
   <section class="comic-panel" style="margin-bottom: 4rem; position: relative; overflow: hidden;">
-    <h1 style="font-size: 3.5rem; text-align: center; margin-bottom: 1rem;">The Webline</h1>
-    <p style="text-align: center; font-size: 1.1rem; color: var(--color-secondary); font-weight: 800; text-transform: uppercase;">
+    <h1 style="font-size: clamp(2.5rem, 8vw, 3.5rem); text-align: center; margin-bottom: 1rem;">The Webline</h1>
+    <p style="text-align: center; font-size: clamp(0.9rem, 3vw, 1.1rem); color: var(--color-secondary); font-weight: 800; text-transform: uppercase;">
       Tracking the trajectory from early foundations to enterprise backend and computational machine learning.
     </p>
 
@@ -166,7 +166,8 @@ import Layout from '../layouts/Layout.astro';
 
   .timeline-section-title {
     font-family: 'Bangers', cursive;
-    font-size: 2rem;
+    /* Responsive timeline headers */
+    font-size: clamp(1.5rem, 5vw, 2rem);
     color: var(--color-white);
     background-color: var(--color-black);
     display: inline-block;
@@ -184,7 +185,6 @@ import Layout from '../layouts/Layout.astro';
     margin-bottom: 2.5rem;
   }
 
-  /* Node Mathematically locked to exactly 15% of the container height to match the SVG web stretch */
   .timeline-node {
     position: absolute;
     left: -44px; 
@@ -203,7 +203,7 @@ import Layout from '../layouts/Layout.astro';
     position: relative;
     background-color: var(--color-panel);
     border: 3px solid var(--color-black);
-    padding: 1rem 1.5rem;
+    padding: clamp(1rem, 3vw, 1.5rem);
     border-radius: 2px 15px 2px 15px;
     box-shadow: 5px 5px 0px var(--color-black);
     width: 100%;
@@ -229,7 +229,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .timeline-content h2 {
-    font-size: 1.8rem;
+    font-size: clamp(1.5rem, 5vw, 1.8rem);
     margin: 0 0 0.5rem 0;
   }
 
@@ -237,8 +237,9 @@ import Layout from '../layouts/Layout.astro';
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    gap: 1rem;
+    gap: 0.5rem;
     margin-bottom: 0.15rem;
+    flex-wrap: wrap; /* Allows dates to wrap cleanly on mobile */
   }
 
   .role-title {
@@ -250,31 +251,26 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .primary-role {
-    font-size: 0.95rem;
+    font-size: clamp(0.85rem, 3vw, 0.95rem);
   }
 
   .secondary-role {
-    font-size: 0.855rem;
+    font-size: clamp(0.75rem, 2.5vw, 0.855rem);
     opacity: 0.8;
   }
 
   .timeline-date {
     font-weight: 700;
     color: var(--color-secondary);
-    font-size: 0.85rem;
+    font-size: clamp(0.75rem, 2.5vw, 0.85rem);
     text-transform: uppercase;
     letter-spacing: 0.3px;
     white-space: nowrap;
-    text-align: right;
+    text-align: left;
   }
 
   .secondary-row {
     margin-bottom: 0.25rem;
-  }
-
-  .secondary-date {
-    opacity: 0.8;
-    font-size: 0.8rem;
   }
 
   .role-row + ul,
@@ -287,6 +283,7 @@ import Layout from '../layouts/Layout.astro';
   .timeline-content li {
     margin-bottom: 0.5rem;
     line-height: 1.5;
+    font-size: clamp(0.9rem, 3vw, 1rem);
   }
 
   .web-divider {
@@ -298,7 +295,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .mini-btn {
-    font-size: 1.1rem !important;
+    font-size: clamp(0.9rem, 3vw, 1.1rem) !important;
     padding: 0.4rem 1rem !important;
     border-width: 3px !important;
     box-shadow: 4px 4px 0px var(--color-black) !important;

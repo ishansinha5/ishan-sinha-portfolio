@@ -13,28 +13,28 @@ const { title } = Astro.props;
     <title>{title} | Ishan Sinha</title>
 </head>
   <body>
-    <header class="comic-panel" style="margin: 3rem auto 2rem auto; max-width: 900px; padding: 1rem 2.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+    <header class="comic-panel" style="margin: clamp(1rem, 4vw, 3rem) auto clamp(1rem, 4vw, 2rem) auto; max-width: 900px; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 1.5rem;">
       
-      <a href="/ishan-sinha-portfolio/" style="text-decoration: none;">
-        <div style="position: relative; display: inline-flex; align-items: center; justify-content: center; width: 280px; height: 120px; margin-top: 15px;">
+      <a href="/ishan-sinha-portfolio/" style="text-decoration: none; margin: 0 auto;">
+        <div style="position: relative; display: inline-flex; align-items: center; justify-content: center; width: clamp(220px, 60vw, 280px); height: clamp(95px, 25vw, 120px); margin-top: 15px;">
           
           <svg viewBox="0 0 300 120" style="position: absolute; width: 100%; height: 100%; z-index: 1; top: 10px; filter: drop-shadow(6px 6px 0px var(--color-black));">
             <polygon points="5,30 35,5 265,5 295,30 150,115" fill="#D32F2F" stroke="#0B090A" stroke-width="6" stroke-linejoin="round" />
             <polygon points="22,35 45,18 255,18 278,35 150,100" fill="#FFEA00" stroke="#0B090A" stroke-width="5" stroke-linejoin="round" />
           </svg>
           
-          <h1 class="text-highlight" style="margin: 0; font-size: 2.2rem; letter-spacing: 2px; position: relative; z-index: 2; transform: translateY(-5px);">ISHAN.DEV</h1>
+          <h1 class="text-highlight" style="margin: 0; font-size: clamp(1.8rem, 5vw, 2.2rem); letter-spacing: 2px; position: relative; z-index: 2; transform: translateY(clamp(-2px, -1vw, -5px));">ISHAN.DEV</h1>
         </div>
       </a>
       
-      <nav style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+      <nav style="display: flex; gap: 0.8rem; flex-wrap: wrap; justify-content: center; width: 100%;">
         <a href="/ishan-sinha-portfolio/" class="nav-btn">HOME</a>
         <a href="/ishan-sinha-portfolio/experience" class="nav-btn">EXPERIENCE</a>
         <a href="/ishan-sinha-portfolio/projects" class="nav-btn">PROJECTS</a>
       </nav>
     </header>
 
-    <main style="max-width: 900px; margin: 0 auto; padding: 0 1rem;">
+    <main style="max-width: 900px; margin: 0 auto; padding: 0 clamp(0.5rem, 2vw, 1rem);">
       <slot /> 
     </main>
   </body>
