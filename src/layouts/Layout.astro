@@ -40,13 +40,12 @@ const { title } = Astro.props;
 </html>
 
 <style>
-  /* Header Responsive Logic */
   .main-header {
     margin: clamp(1rem, 4vw, 3rem) auto clamp(1rem, 4vw, 2rem) auto;
     max-width: 900px;
     padding: 1rem 2.5rem;
     display: flex;
-    justify-content: space-between; /* Keeps logo left, nav right on desktop */
+    justify-content: space-between; 
     align-items: center;
     flex-wrap: wrap;
     gap: 1.5rem;
@@ -54,6 +53,7 @@ const { title } = Astro.props;
 
   .logo-link {
     text-decoration: none;
+    flex-shrink: 0; /* Prevents logo from squishing */
   }
 
   .logo-container {
@@ -91,10 +91,10 @@ const { title } = Astro.props;
     justify-content: flex-end;
   }
 
-  /* Mobile Overrides */
-  @media (max-width: 768px) {
+  /* Raised to 850px to catch iPads and narrow laptop windows */
+  @media (max-width: 850px) {
     .main-header {
-      justify-content: center; /* Centers everything on mobile */
+      justify-content: center; 
       flex-direction: column;
       padding: 1.5rem 1rem;
     }

@@ -208,6 +208,7 @@ import Layout from '../layouts/Layout.astro';
     width: 100%;
     box-sizing: border-box;
     z-index: 1;
+    word-wrap: break-word; /* Prevents text from pushing outside the box */
   }
 
   .timeline-content ul {
@@ -241,8 +242,8 @@ import Layout from '../layouts/Layout.astro';
     flex-wrap: wrap; 
   }
 
-  /* This forces the title and date to stack neatly on phones */
-  @media (max-width: 600px) {
+  /* Raised to 768px to ensure titles and dates stack neatly on all mobile devices */
+  @media (max-width: 768px) {
     .role-row {
       flex-direction: column;
       align-items: flex-start;
@@ -255,7 +256,8 @@ import Layout from '../layouts/Layout.astro';
     text-transform: uppercase;
     letter-spacing: 0.5px;
     color: var(--color-secondary);
-    word-break: break-word; /* Prevents long words from bleeding out */
+    display: block;
+    width: 100%; /* Forces the box to contain the text */
   }
 
   .primary-role {
@@ -274,6 +276,7 @@ import Layout from '../layouts/Layout.astro';
     text-transform: uppercase;
     letter-spacing: 0.3px;
     text-align: left;
+    /* white-space: nowrap removed to prevent breaking out of boxes */
   }
 
   .secondary-row {
