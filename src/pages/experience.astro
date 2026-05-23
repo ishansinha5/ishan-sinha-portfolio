@@ -166,7 +166,6 @@ import Layout from '../layouts/Layout.astro';
 
   .timeline-section-title {
     font-family: 'Bangers', cursive;
-    /* Responsive timeline headers */
     font-size: clamp(1.5rem, 5vw, 2rem);
     color: var(--color-white);
     background-color: var(--color-black);
@@ -239,7 +238,16 @@ import Layout from '../layouts/Layout.astro';
     align-items: baseline;
     gap: 0.5rem;
     margin-bottom: 0.15rem;
-    flex-wrap: wrap; /* Allows dates to wrap cleanly on mobile */
+    flex-wrap: wrap; 
+  }
+
+  /* This forces the title and date to stack neatly on phones */
+  @media (max-width: 600px) {
+    .role-row {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.2rem;
+    }
   }
 
   .role-title {
@@ -247,25 +255,24 @@ import Layout from '../layouts/Layout.astro';
     text-transform: uppercase;
     letter-spacing: 0.5px;
     color: var(--color-secondary);
-    flex-shrink: 0;
+    word-break: break-word; /* Prevents long words from bleeding out */
   }
 
   .primary-role {
-    font-size: clamp(0.85rem, 3vw, 0.95rem);
+    font-size: clamp(0.75rem, 3.5vw, 0.95rem);
   }
 
   .secondary-role {
-    font-size: clamp(0.75rem, 2.5vw, 0.855rem);
+    font-size: clamp(0.7rem, 3vw, 0.855rem);
     opacity: 0.8;
   }
 
   .timeline-date {
     font-weight: 700;
     color: var(--color-secondary);
-    font-size: clamp(0.75rem, 2.5vw, 0.85rem);
+    font-size: clamp(0.7rem, 3vw, 0.85rem);
     text-transform: uppercase;
     letter-spacing: 0.3px;
-    white-space: nowrap;
     text-align: left;
   }
 
