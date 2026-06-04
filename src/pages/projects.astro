@@ -17,20 +17,16 @@ import Layout from '../layouts/Layout.astro';
       <h2 style="font-size: clamp(1.8rem, 5vw, 2.2rem); border-bottom: 4px solid var(--color-black); padding-bottom: 0.5rem; margin-bottom: 2rem;">Personal ML & Full-Stack</h2>
       
       <div class="project-grid">
-        
         <div class="project-card">
           <div class="project-header">
             <h3>NBA Finals NLP Predictor</h3>
             <span class="status live">Live on Streamlit</span>
           </div>
           <div class="pill-container">
-            <span class="pill-tag">Python</span>
-            <span class="pill-tag">NLP</span>
-            <span class="pill-tag">Streamlit</span>
-            <span class="pill-tag">Sentiment Analysis</span>
+            <span class="pill-tag">Python</span><span class="pill-tag">NLP</span><span class="pill-tag">Whisper</span><span class="pill-tag">RAG</span><span class="pill-tag">Streamlit</span><span class="pill-tag">Sentiment Analysis</span>
           </div>
           <p>
-            An end-to-end NLP pipeline tracking team momentum metrics through postgame media sentiment. I built this to process live scraped data from press conferences, scrubbing out the broadcast noise to keep the dataset accurate and predict the 2026 NBA Finals.
+            An end-to-end NLP pipeline tracking team momentum through postgame media sentiment. I built this to process live-scraped press conference data, scrubbing out broadcast noise to keep the dataset accurate. It features a custom Whisper audio-transcription fallback and a RAG pipeline that allows users to query team dynamics, providing evidence-based predictions for the 2026 NBA playoffs.
           </p>
           <div class="project-links">
             <a href="https://nba-finals-predictor-2026-izrjrrysjipdqjlrqbv5z7.streamlit.app/" target="_blank" class="comic-btn mini-btn">View App</a>
@@ -44,20 +40,16 @@ import Layout from '../layouts/Layout.astro';
             <span class="status dev">Phase 2 in Dev</span>
           </div>
           <div class="pill-container">
-            <span class="pill-tag">Microservices</span>
-            <span class="pill-tag">Python/FastAPI</span>
-            <span class="pill-tag">JavaScript/Vercel</span>
-            <span class="pill-tag">C++</span>
+            <span class="pill-tag">Microservices</span><span class="pill-tag">Python/FastAPI</span><span class="pill-tag">JavaScript/Vercel</span><span class="pill-tag">C++</span><span class="pill-tag">pHash</span>
           </div>
           <p>
-            A microservices-based shop locator and inventory tracker. Phase 1 is currently live on Vercel. For Phase 2, I am actively working on restructuring the architecture to include a C++ perceptual hashing layer and a Python FastAPI backend to optimize image processing and reduce redundant GPU use.
+            Previously a standard web application, I am refactoring the architecture into a compute-optimized microservices pipeline. My focus is on architectural integrity—using a C++ perceptual hashing layer to intercept duplicate images and a Python FastAPI backend to run vision inference only when necessary. This drastically reduces GPU compute load and improves data processing efficiency.
           </p>
           <div class="project-links">
             <a href="https://comicbookshopdetector.vercel.app/" target="_blank" class="comic-btn mini-btn">Live Deploy</a>
             <a href="https://github.com/ishansinha5/comicbookshopdetector" target="_blank" class="comic-btn mini-btn secondary-btn">View GitHub Repository</a>
           </div>
         </div>
-
       </div>
     </div>
 
