@@ -60,9 +60,9 @@ import Layout from '../layouts/Layout.astro';
             <span class="timeline-date secondary-date">Aug 2024 – Nov 2025</span>
           </div>
           <ul>
-            <li>Engineered a resilient autonomous flight architecture for the C-UASC 2026 Mojave competition, achieving an Average Categorical Finish of 4.75 and securing 3rd place in Package Delivery.</li>
-            <li>Executed bare-metal MAVLink 2.0 protocol overrides on an NVIDIA Jetson Orin Nano, dismantling pre-flight safety firewalls to force a direct 3-wire serial UART telemetry handshake at a 921600 baud rate.</li>
-            <li>Developed an automated Post-Flight Forensics Suite incorporating a custom Haversine-lite spherical distance algorithm (Distance = &radic;(&Delta;X&sup2; + &Delta;Y&sup2; + &Delta;Z&sup2;)) with a cos(lat) transformation to compute official judge-facing CSV scoring matrices.</li>
+            <li>Directed the software execution for a resilient autonomous flight architecture deployed on an NVIDIA Jetson Orin Nano, actuating multi-payload servos via MAVLink telemetry to secure a 4.75 average categorical finish at the Mojave C-UASC competition.</li>
+            <li>Engineered a reactive Post-Flight Forensics Suite designed to autonomously ingest binary DataFlash (.bin) logs and physical drop data, generating official judge-facing CSV scoring matrices under severe flight line constraints.</li>
+            <li>Developed a custom spherical math algorithm to process geospatial data, calculating 3D spatial deviations, dynamically scales longitude deviations using a cos(lat) transformation, accurately resolving waypoint navigation errors down to 0.55 meters.</li>
           </ul>
           <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
             <a href="https://github.com/MSU-UnmannedSystem/2025_SUAS" target="_blank" class="comic-btn mini-btn">View Drone GitHub</a>

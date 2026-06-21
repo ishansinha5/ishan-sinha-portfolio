@@ -21,18 +21,18 @@ import Layout from '../layouts/Layout.astro';
         <div class="project-card">
           <div class="project-header">
             <h3>NBA Finals NLP Predictor</h3>
-            <span class="status live">Live on Streamlit</span>
+            <span class="status live">Live Deploy</span>
           </div>
           <div class="pill-container">
             <span class="pill-tag">Python</span>
-            <span class="pill-tag">NLP</span>
-            <span class="pill-tag">Whisper</span>
+            <span class="pill-tag">PyTorch</span>
+            <span class="pill-tag">Hugging Face (RoBERTa)</span>
+            <span class="pill-tag">ChromaDB</span>
             <span class="pill-tag">RAG</span>
-            <span class="pill-tag">Streamlit</span>
-            <span class="pill-tag">Sentiment Analysis</span>
+            <span class="pill-tag">Random Forest</span>
           </div>
           <p>
-            An end-to-end NLP pipeline tracking team momentum through postgame media sentiment. I built this to process live-scraped press conference data, scrubbing out broadcast noise to keep the dataset accurate. It features a custom Whisper audio-transcription fallback and a RAG pipeline that allows users to query team dynamics, providing evidence-based predictions for the 2026 NBA playoffs.
+            An end-to-end NLP pipeline that successfully predicted the exact series length and outright winner of the 2026 NBA Finals. I built a Retrieval-Augmented Generation (RAG) architecture utilizing ChromaDB and semantic chunking to manage and query an empirical dataset of over 1,000 post-game transcript snippets. To extract sports intelligence, the system processes text through a custom RoBERTa pipeline, mapping 7-dimensional emotional feature vectors to isolate subtle psychological signals—such as shifts in team momentum and the anxiety profile of Head Coach Mike Brown. To maintain compute efficiency and prevent overfitting on the tabular dataset, the final predictions are driven by a lightweight Random Forest algorithm, ensuring the mathematical logic behind every prediction remains strictly explainable.
           </p>
           <div class="project-links">
             <a href="https://nba-finals-predictor-2026-izrjrrysjipdqjlrqbv5z7.streamlit.app/" target="_blank" class="comic-btn mini-btn">View App</a>
@@ -42,21 +42,22 @@ import Layout from '../layouts/Layout.astro';
 
         <div class="project-card">
           <div class="project-header">
-            <h3>OpticHash (Distributed Edge-Vision Pipeline)</h3>
+            <h3>Optichash</h3>
             <span class="status live">Live Deploy</span>
           </div>
           <div class="pill-container">
-            <span class="pill-tag">Microservices</span>
-            <span class="pill-tag">Python/FastAPI</span>
-            <span class="pill-tag">JavaScript/Vercel</span>
-            <span class="pill-tag">C++</span>
-            <span class="pill-tag">pHash</span>
+            <span class="pill-tag">Java (Spring Boot)</span>
+            <span class="pill-tag">Docker</span>
+            <span class="pill-tag">C++ (OpenCV)</span>
+            <span class="pill-tag">PyTorch (INT8)</span>
+            <span class="pill-tag">FastAPI</span>
+            <span class="pill-tag">Vanilla JS</span>
           </div>
           <p>
-            Previously a standard web application, I am refactoring the architecture into a compute-optimized microservices pipeline. My focus is on architectural integrity—using a C++ perceptual hashing layer to intercept duplicate images and a Python FastAPI backend to run vision inference only when necessary. This drastically reduces GPU compute load and improves data processing efficiency.
+            I refactored this system from a monolithic web app into a hardware-aware, distributed computer vision pipeline focused on minimizing computational waste. The architecture uses a Java Spring Boot API Gateway to route multi-part image streams across a multi-stage Docker network. To intercept duplicate queries before they hit the machine learning layer, a native C++ microservice evaluates structural geometry and generates O(1) Perceptual Hashes (pHash) via a Discrete Cosine Transform. For novel images, the pipeline relies on an edge-focused PyTorch MobileNetV3 model optimized with INT8 dynamic quantization, safely reducing the VRAM footprint by over 75% while achieving an inference baseline of exactly 58.6M FLOPs. To bypass free-tier cloud constraints, I also engineered the vanilla JavaScript frontend into a stateful simulator, utilizing the HTML5 &lt;canvas&gt; API to run physical pixel heuristics locally in the browser.
           </p>
           <div class="project-links">
-            <a href="https://optichash.vercel.app/" target="_blank" class="comic-btn mini-btn">Live Deploy</a>
+            <a href="https://optichash.vercel.app/" target="_blank" class="comic-btn mini-btn">View App</a>
             <a href="https://github.com/ishansinha5/Optichash" target="_blank" class="comic-btn mini-btn secondary-btn">View GitHub Repository</a>
           </div>
         </div>
