@@ -32,7 +32,13 @@ import Layout from '../layouts/Layout.astro';
             <span class="pill-tag">Random Forest</span>
           </div>
           <p>
-            An end-to-end NLP pipeline that successfully predicted the exact series length and outright winner of the 2026 NBA Finals. I built a Retrieval-Augmented Generation (RAG) architecture utilizing ChromaDB and semantic chunking to manage and query an empirical dataset of over 1,000 post-game transcript snippets. To extract sports intelligence, the system processes text through a custom RoBERTa pipeline, mapping 7-dimensional emotional feature vectors to isolate subtle psychological signals—such as shifts in team momentum and the anxiety profile of Head Coach Mike Brown. To maintain compute efficiency and prevent overfitting on the tabular dataset, the final predictions are driven by a lightweight Random Forest algorithm, ensuring the mathematical logic behind every prediction remains strictly explainable.
+            An end-to-end NLP pipeline that successfully predicted the exact series length and outright winner of the 2026 NBA Finals. I built a Retrieval-Augmented Generation (RAG) architecture utilizing ChromaDB and semantic chunking to manage and query an empirical dataset of over 1,000 post-game transcript snippets.
+          </p>
+          <p>
+            To extract sports intelligence, the system processes text through a custom RoBERTa pipeline, mapping 7-dimensional emotional feature vectors to isolate subtle psychological signals—such as shifts in team momentum and the anxiety profile of Head Coach Mike Brown.
+          </p>
+          <p>
+            To maintain compute efficiency and prevent overfitting on the tabular dataset, the final predictions are driven by a lightweight Random Forest algorithm, ensuring the mathematical logic behind every prediction remains strictly explainable.
           </p>
           <div class="project-links">
             <a href="https://nba-finals-predictor-2026-izrjrrysjipdqjlrqbv5z7.streamlit.app/" target="_blank" class="comic-btn mini-btn">View App</a>
@@ -42,7 +48,7 @@ import Layout from '../layouts/Layout.astro';
 
         <div class="project-card">
           <div class="project-header">
-            <h3>Optichash</h3>
+            <h3>OpticHash (Distributed Edge-Vision Pipeline)</h3>
             <span class="status live">Live Deploy</span>
           </div>
           <div class="pill-container">
@@ -54,7 +60,13 @@ import Layout from '../layouts/Layout.astro';
             <span class="pill-tag">Vanilla JS</span>
           </div>
           <p>
-            I refactored this system from a monolithic web app into a hardware-aware, distributed computer vision pipeline focused on minimizing computational waste. The architecture uses a Java Spring Boot API Gateway to route multi-part image streams across a multi-stage Docker network. To intercept duplicate queries before they hit the machine learning layer, a native C++ microservice evaluates structural geometry and generates O(1) Perceptual Hashes (pHash) via a Discrete Cosine Transform. For novel images, the pipeline relies on an edge-focused PyTorch MobileNetV3 model optimized with INT8 dynamic quantization, safely reducing the VRAM footprint by over 75% while achieving an inference baseline of exactly 58.6M FLOPs. To bypass free-tier cloud constraints, I also engineered the vanilla JavaScript frontend into a stateful simulator, utilizing the HTML5 &lt;canvas&gt; API to run physical pixel heuristics locally in the browser.
+            I refactored this system from a monolithic web app into a hardware-aware, distributed computer vision pipeline focused on minimizing computational waste. The architecture uses a Java Spring Boot API Gateway to route multi-part image streams across a multi-stage Docker network.
+          </p>
+          <p>
+            To intercept duplicate queries before they hit the machine learning layer, a native C++ microservice evaluates structural geometry and generates O(1) Perceptual Hashes (pHash) via a Discrete Cosine Transform. For novel images, the pipeline relies on an edge-focused PyTorch MobileNetV3 model optimized with INT8 dynamic quantization, safely reducing the VRAM footprint by over 75% while achieving an inference baseline of exactly 58.6M FLOPs.
+          </p>
+          <p>
+            To bypass free-tier cloud constraints, I also engineered the vanilla JavaScript frontend into a stateful simulator, utilizing the HTML5 &lt;canvas&gt; API to run physical pixel heuristics locally in the browser.
           </p>
           <div class="project-links">
             <a href="https://optichash.vercel.app/" target="_blank" class="comic-btn mini-btn">View App</a>
@@ -148,11 +160,10 @@ import Layout from '../layouts/Layout.astro';
 
   .project-header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Forces the status tag to drop below the title */
     align-items: flex-start;
-    margin-bottom: 0.5rem;
-    gap: 1rem;
-    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    gap: 0.8rem;
   }
 
   .project-header h3 {
@@ -199,10 +210,16 @@ import Layout from '../layouts/Layout.astro';
     background-color: var(--color-accent);
   }
 
+  /* Spacing logic for multiple paragraphs */
   .project-card p {
     font-size: clamp(0.95rem, 3vw, 1rem);
     line-height: 1.7;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1rem;
+    margin-top: 0;
+  }
+
+  .project-card p:last-of-type {
+    margin-bottom: 2.5rem; /* Restores the extra space right before the buttons */
   }
 
   .project-links {
