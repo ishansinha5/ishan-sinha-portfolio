@@ -60,11 +60,14 @@ import Layout from '../layouts/Layout.astro';
             <span class="timeline-date secondary-date">Aug 2024 – Nov 2025</span>
           </div>
           <ul>
-            <li>Directing the software engineering lifecycle for autonomous drone missions, from supervising flight path algorithms to training a proprietary machine learning model for aerial object detection.</li>
-            <li>Integrating and stress-testing LIDAR systems across distinct Python environments while strictly adhering to hardware weight and price constraints.</li>
-            <li>Programming and validating autonomous flight paths by analyzing ArduPilot telemetry data to ensure obstacle avoidance and mission compliance.</li>
+            <li>Engineered a resilient autonomous flight architecture for the C-UASC 2026 Mojave competition, achieving an Average Categorical Finish of 4.75 and securing 3rd place in Package Delivery.</li>
+            <li>Executed bare-metal MAVLink 2.0 protocol overrides on an NVIDIA Jetson Orin Nano, dismantling pre-flight safety firewalls to force a direct 3-wire serial UART telemetry handshake at a 921600 baud rate.</li>
+            <li>Developed an automated Post-Flight Forensics Suite incorporating a custom Haversine-lite spherical distance algorithm (Distance = &radic;(&Delta;X&sup2; + &Delta;Y&sup2; + &Delta;Z&sup2;)) with a cos(lat) transformation to compute official judge-facing CSV scoring matrices.</li>
           </ul>
-          <a href="https://github.com/MSU-UnmannedSystem/2025_SUAS" target="_blank" class="comic-btn mini-btn" style="margin-top: 1rem;">View Drone GitHub</a>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
+            <a href="https://github.com/MSU-UnmannedSystem/2025_SUAS" target="_blank" class="comic-btn mini-btn">View Drone GitHub</a>
+            <a href="https://docs.google.com/spreadsheets/d/1VuGpZPVMiQJwbJ27cN-Mkd64FEsq-SwYX0pbtUBadOQ/edit?gid=0#gid=0" target="_blank" class="comic-btn mini-btn secondary-btn">View Scoring CSV</a>
+          </div>
         </div>
       </div>
 
@@ -208,7 +211,7 @@ import Layout from '../layouts/Layout.astro';
     width: 100%;
     box-sizing: border-box;
     z-index: 1;
-    word-wrap: break-word; /* Prevents text from pushing outside the box */
+    word-wrap: break-word; 
   }
 
   .timeline-content ul {
@@ -242,7 +245,6 @@ import Layout from '../layouts/Layout.astro';
     flex-wrap: wrap; 
   }
 
-  /* Raised to 768px to ensure titles and dates stack neatly on all mobile devices */
   @media (max-width: 768px) {
     .role-row {
       flex-direction: column;
@@ -257,7 +259,7 @@ import Layout from '../layouts/Layout.astro';
     letter-spacing: 0.5px;
     color: var(--color-secondary);
     display: block;
-    width: 100%; /* Forces the box to contain the text */
+    width: 100%; 
   }
 
   .primary-role {
@@ -276,7 +278,6 @@ import Layout from '../layouts/Layout.astro';
     text-transform: uppercase;
     letter-spacing: 0.3px;
     text-align: left;
-    /* white-space: nowrap removed to prevent breaking out of boxes */
   }
 
   .secondary-row {
